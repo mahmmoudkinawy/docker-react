@@ -6,4 +6,4 @@ before-install:
   - docker build -t kino2001/docker-react -f Dockerfile.dev .
 
 script:
-  - docker run kino2001/docker-react
+  - docker run -e CI=true kino2001/docker-react npm run test -- --coverage
